@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>Filtering exercise</title> 
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+         <script>
+          $(document).ready(function(){
+            $("li").filter(".not-2022").css("background-color", "lightblue");;
+          });
+          
+          $(document).ready(function(){
+            $("li").not("#dot").css("border-style", "groove");
+          });
+
+          $(document).ready(function(){
+            $("div").last().css("font-size", "25px");
+          });
+
+          $(document).ready(function(){
+            $("h1").css("text-align", "center");
+          });
+
+          $(document).ready(function(){
+            $("h1").css("background-color", "rgb(25, 25, 112)");
+          });
+
+          $(document).ready(function(){
+            $("h1").css("color", "white");
+          });
+
+          $(document).ready(function(){
+            $("p").filter(".style").css("font-family", "Arial, Helvetica, sans-serif");
+          });
+
+          $(document).ready(function(){
+             $("#input").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+            $("#list li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 });
+            });
+        });
+
+        $(document).ready(function(){
+            $("h3").filter("#check").css("margin-top", "20pt");
+        });
+
+        $(document).ready(function(){
+            $("h3").filter("#check").css("font-weight", "bold");
+        });
+
+        </script> 
+    </head>
+
+    <body>
+        <h3 id="check">Check if your favourite movie is in the list!</h3>
+        <input id="input" type="text" placeholder="Search...">
+        <div>
+            <h1>List of top ten movies currently</h1>
+            <ol id="list">
+                <li>AVATAR: THE WAY OF WATER (2022)</li>
+                <li>GLASS ONION: A KNIVES OUT MYSTERY (2022)</li>
+                <li>BABYLON (2022)</li>
+                <li>PUSS IN BOOTS: THE LAST WISH (2022)</li>
+                <li>THE BANSHEES OF INISHERIN (2022)</li>
+                <li>VIOLENT NIGHT (2022)</li>
+                <li>THE WHALE (2022)</li>
+                <li>WHITNEY HOUSTON: I WANNA DANCE WITH SOMEBODY (2022)</li>
+                <li class="not-2022">AVATAR (2009)</li>
+                <li>BLACK ADAM (2022)</li>
+            </ol>
+        </div>
+        <div>
+            <h1>List of top ten movies of all time</h1>
+            <ol id="list">
+                <li id="dot">The Shawshank Redemption (1994)</li>
+                <li>The Godfather (1972)</li>
+                <li id="dot">The Dark Knight (2008)</li>
+                <li>The Godfather Part II (1974))</li>
+                <li id="dot">12 Angry Men (1957)</li>
+                <li>Schindler's List (1993)</li>
+                <li id="dot">The Lord of the Rings: The Return of the King (2003)</li>
+                <li>Pulp Fiction (1994)</li>
+                <li id="dot">The Lord of the Rings: The Fellowship of the Ring (2001)</li>
+                <li>The Good, the Bad and the Ugly (1966)</li>
+            </ol>
+        </div>
+        <br><br>
+        <div>
+            <p><h2>How would you describe a movie lover?</h2></p>
+            <p class="style">A person with a passionate interest in cinema is called a cinephile (/ˈsɪnɪfaɪl/), cinemaphile, filmophile, or, informally, a film buff (also movie buff). To a cinephile,
+            a movie is not just a form of entertainment as they see films from a more critical point of view.</p> 
+        </div>
+    </body>
+</html>
